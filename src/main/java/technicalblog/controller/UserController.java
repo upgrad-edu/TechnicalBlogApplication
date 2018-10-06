@@ -11,6 +11,7 @@ import technicalblog.service.PostService;
 import technicalblog.service.UserService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -48,7 +49,7 @@ public class UserController {
 
     @RequestMapping(value = "users/logout", method=RequestMethod.POST)
     public String logout(Model model) {
-        ArrayList<Post> posts = postService.getAllPosts();
+        List<Post> posts = postService.getAllPosts();
 
         model.addAttribute("posts", posts);
         return "index";
