@@ -3,19 +3,21 @@
 <html xmlns:th="http://thymeleaf.org">
 
     <head th:replace="layout :: site-head">
-        <title>Spring MVC Application - Login</title>
+        <title>Spring MVC Application - User Registration</title>
     </head>
 
     <header th:replace="layout :: logged-out"></header>
 
-    <h2>Please Login:</h2>
+    <h2>Please Register:</h2>
 
     <form method="post" th:object="${User}">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username"/>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password"/>
-        <input type="submit" value="Login"/>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullName"/>
+        <input type="submit" value="Register"/>
     </form>
 
 </html>
