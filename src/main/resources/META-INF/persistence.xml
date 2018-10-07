@@ -5,6 +5,7 @@
              version="2.1">
 
     <persistence-unit name="techblog">
+
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <properties>
@@ -15,6 +16,12 @@
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect" />
             <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- update -->
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+
+
         </properties>
 
     </persistence-unit>
